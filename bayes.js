@@ -34,7 +34,7 @@ function run(text){
             // ----------------------------------------------------------
             //      YOUR CODE
             // ----------------------------------------------------------            
-
+            logSum += (Math.log(1-probability))-Math.log(probability)
             // debugging feedback
             console.log(language + "icity of " + word + ": " + probability + ", logSum: " + logSum);
         }
@@ -43,6 +43,7 @@ function run(text){
         // ----------------------------------------------------------
         //      YOUR CODE
         // ---------------------------------------------------------- 
+        scores[language]=1/(1+Math.exp(logSum))
 
     }
     displayPretty(scores);    
